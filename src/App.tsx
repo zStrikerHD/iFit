@@ -3,6 +3,7 @@ import Features from "@/Container/Features";
 import Footer from "@/Container/Footer";
 import Hero from "@/Container/Hero";
 import Navbar from "@/Container/Navbar";
+import Pricing from "@/Container/Pricing";
 import Stats from "@/Container/Stats";
 
 export function App() {
@@ -11,8 +12,9 @@ export function App() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <Pricing />
         <Stats />
+        <Features />
         <CallToAction />
       </main>
       <Footer />

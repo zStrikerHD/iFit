@@ -8,6 +8,8 @@ interface SectionHeadingProps {
   title: ReactNode;
   description?: ReactNode;
   align?: "left" | "center";
+  /** "dark" para secções de fundo escuro (padrão), "light" para fundo claro. */
+  tone?: "dark" | "light";
   className?: string;
 }
 
@@ -16,8 +18,11 @@ export function SectionHeading({
   title,
   description,
   align = "center",
+  tone = "dark",
   className,
 }: SectionHeadingProps) {
+  const isLight = tone === "light";
+
   return (
     <motion.div
       initial="hidden"
@@ -32,15 +37,21 @@ export function SectionHeading({
       <motion.span
         variants={fadeUp}
         custom={0}
-        className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-neon"
+        className={cn(
+          "inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em]",
+          isLight ? "text-blue-600" : "text-neon",
+        )}
       >
-        <span aria-hidden className="h-px w-6 bg-neon/60" />
+        <span aria-hidden className={cn("h-px w-6", isLight ? "bg-blue-600/60" : "bg-neon/60")} />
         {eyebrow}
       </motion.span>
       <motion.h2
         variants={fadeUp}
         custom={0.08}
-        className="font-display text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl"
+        className={cn(
+          "font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl",
+          isLight ? "text-zinc-950" : "text-white",
+        )}
       >
         {title}
       </motion.h2>
@@ -48,7 +59,10 @@ export function SectionHeading({
         <motion.p
           variants={fadeUp}
           custom={0.16}
-          className="text-base leading-relaxed text-pretty text-zinc-400 sm:text-lg"
+          className={cn(
+            "text-base leading-relaxed text-pretty sm:text-lg",
+            isLight ? "text-zinc-600" : "text-zinc-400",
+          )}
         >
           {description}
         </motion.p>

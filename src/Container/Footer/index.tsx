@@ -32,7 +32,7 @@ const COLUMNS: readonly FooterColumn[] = [
     title: "Atendimento",
     links: [
       { label: "Aula experimental", href: "#contato" },
-      { label: "Planos", href: "#contato" },
+      { label: "Planos", href: "#planos" },
       { label: "Trabalhe conosco", href: "#contato" },
     ],
   },
@@ -122,7 +122,7 @@ const Footer = () => {
         aria-hidden
         className="pointer-events-none -mb-[0.22em] select-none text-center font-display text-[26vw] font-bold leading-none tracking-tighter bg-gradient-to-b from-white/[0.07] to-transparent to-75% bg-clip-text text-transparent lg:text-[18rem]"
       >
-        iFit
+        iFIT
       </p>
     </footer>
   );

@@ -12,9 +12,10 @@ interface NavLink {
 }
 
 const NAV_LINKS: readonly NavLink[] = [
-  { label: "Estrutura", href: "#estrutura" },
+  { label: "Planos", href: "#planos" },
   { label: "Resultados", href: "#resultados" },
   { label: "Modalidades", href: "#modalidades" },
+  { label: "Estrutura", href: "#estrutura" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -43,7 +44,7 @@ const Navbar = () => {
             : "border-transparent bg-transparent",
         )}
       >
-        <a href="#topo" aria-label="iFit — início" onClick={closeMenu}>
+        <a href="#topo" aria-label="iFIT — início" onClick={closeMenu}>
           <Logo />
         </a>
 

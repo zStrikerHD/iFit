@@ -47,7 +47,7 @@ export function ShimmerButton({
       {/* Corpo do botão */}
       <span
         className={cn(
-          "relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full font-semibold tracking-tight text-white",
+          "relative inline-flex w-full items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-full font-semibold tracking-tight text-white",
           "bg-[radial-gradient(120%_120%_at_50%_0%,#27272a_0%,#0c0c0e_60%)]",
           "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12)]",
           sizeClasses[size],
